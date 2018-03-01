@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        //     //click button
+        //     $('#dotClick').click(function(){
+        //        alert("You have clicked a button");
+        //     });
+    
+        //    //hide text
+        //    $('#dotHide').click(function(){
+        //         $('.textHide').hide("slow",function(){
+        //        });
+        //    });
+
+            // //show text
+            //      $('.showText').hide(function(){
+            //          $('#dotShow').click(function(){
+            //             $('.showText').show();
+            //         });
+            //     });
+
+             //toggle text
+            // $('#dotToggle').click(function(){
+            //         $('.toggleMe').toggle(function(){
+            //         });
+            //  });
+
+            //   //SlideDown -- get back to you
+            //   $('#dotSlideDown').click(function(){
+            //         $('.slideMeUp').slideDown();
+            //   });
+
+            //  //SlideUp
+            //   $('#dotSlideUp').click(function(){
+            //          $('.slideMeUp').slideUp();     
+            //   });
+
+            //  //SlideToggle
+            // $('#dotSlideToggle').click(function(){
+            //       $('.slidetexttoggle').slideToggle(function(){
+            //        });
+            //  });
+
+            //  //FadeIn -- not working
+            //       $('#dotFadeIn').click(function(){
+            //        $('.fadeouttext').fadeIn("slow");
+            //     });
+
+            // //FadeOut 
+            // $('#dotFadeOut').click(function(){
+            //     $('.fadeouttext').fadeOut();
+            //  });
+
+            // //Add class to Text
+            //    $("#dotAddClass").click(function(){
+            //        $(".noclass").addClass("withclass");
+            //    });
+           
+            // //Add text before
+            //     $('#dotAddBefore').click(function(){
+            //         $('.beforejquery').before("<p>Dojo</p>");
+            //      });
+
+            // //Add text after
+            //     $('#dotAddAfter').click(function(){
+            //         $('.beforejquery').after("<p>After Dojo</p>")});
+            //     });
+
+            //Append text
+            $('#dotAppend').click(function(){
+                $('.add-text').append("<p>Here is more text.</p>");
+            });
+
+            //change the html on the page
+            $('#dotHtml').click(function(){
+                $('.gatherHtml').html("Now, it's a <b>paragraph</b>");
+            });
+
+            //Get the value of an attribute
+            $('#dotAttr').click(function(){
+                var blue = $('.attributeName').attr("id");
+                $('.attributeName').addClass(blue);
+            });
+
+            //Get the value of form attributes
+            $('#dotVal').click(function(){
+                $('.valInput').val("Replaced!")
+            });
+
+            $('#dotAddDataIn').click(function(){
+                $('.fillMe').data("Hello, new World!");
+            });
+
+            $('#dotGetDataOut').click(function(){
+                $('.fillMe').data("Hello");
+            });
+
+
+        });
+    </script>
+    <style>
+        .withclass {
+            color: red;
+        }
+        button {
+            background-color: rgb(241, 148, 9);
+        }
+
+        .blue{
+            color: blue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id ="dotClick">.click</button>
+    
+    <button id ="dotHide">.hide</button>
+    <p class="textHide">I robbed a bank. I need to hide!.</p>
+    
+    <button id ="dotShow">.show</button>
+    <p class="showText">Show me</p>
+    
+    <button id ="dotToggle">.toggle</button>
+    <p class="toggleMe">Toggle me</p>
+    
+    <button id ="dotSlideDown">.slidedown</button>
+
+    <button id ="dotSlideUp">.slideup</button>
+    <p class="slideMeUp">Slide this text UP</p>
+
+    <button id ="dotSlideToggle">.slidetoggle</button>
+    <p class="slidetexttoggle">Slide, Toggle</p>
+
+    <button id ="dotFadeIn">.fadein</button>
+    <p class="fadeintext">Fade text</p>
+
+    <button id="dotFadeOut">.fadeout</button>
+    <p class="fadeouttext">Fade text</p>
+
+    <button id="dotAddClass">.addclass</button>
+    <p class="noclass">HTML with class</p>
+
+    <button id="dotAddBefore">.before</button>
+    <p class="beforejquery">Coding</p>
+
+    <button id ="dotAddAfter">.after</button>
+    <p class="afterjquery">Coding</p>
+
+    <button id ="dotAppend">.append</button>
+    <p class="add-text">Here is some text.</p>
+
+    <button id ="dotHtml">.html</button>
+    <p class="gatherHtml">This is some text</p>
+
+    <button id ="dotAttr">.attr</button>
+    <p class="attributeName" id="blue">This has a name.</p>
+
+    <button id ="dotVal">.val</button>
+    <input class="valInput" value="7">
+
+    <p><button id ="dotText">.text</button></p>
+    <p class="replaceText">Hello world!</p>
+
+    <button id ="dotAddDataIn">.data</button>
+    <p class="fillMe"></p>
+
+    <button id ="dotGetDataOut">.data</button>
+    <p class="test"></p>
+    
+</body>
+</html> 

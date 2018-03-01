@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+#wrapper {
+    height: 400px;
+    width: 500px;
+    margin: 0 auto;
+}
+.dynamicTable  {
+    border: 2px solid grey;
+    font-size: 20px;
+    width: 600px;
+    text-align: center;
+ } 
+
+.appendTable {
+    margin: 10px 0px 10px 100px;
+    width: 300px;
+    text-align:right;
+}
+
+.userForm {
+    height: 224px;
+    width: 500px;
+    border: 10px solid grey;
+    margin: 65px 0px 0px 10px;
+    padding: 10px; 
+}
+hr {
+    width: 400px;
+}
+.info-input {
+    width: 200px;
+    height: 25px
+}
+#click {
+    width: 100px;
+    height: 200px;
+    margin: 10px 0px 0px 300px;
+
+}
+   
+

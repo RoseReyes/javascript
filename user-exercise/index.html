@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $('#click').click(function(){
+                var fName =$('#first_name').val();
+                var lName =$('#last_name').val();
+                var email =$('#email').val();
+                var contact_no =$('#contact_no').val();
+                
+                $('.dynamicTable').append('<tr><td>'+fName+'</td><td>'+lName+'</td><td>'+email+'</td><td>'+contact_no+'</td></tr>');
+                $('.info-input').val("");
+                return false;
+            });  
+        });
+    
+    </script>
+</head>
+<body> 
+    <div id="wrapper">
+        <table class="dynamicTable">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th> 
+                <th>Email</th>
+                <th>Contact #</th>
+            </tr>
+        </table>
+        <div class="userForm">
+            <h1>Add User</h1>
+            <hr>
+            <form class="regForm">    
+                <table class="appendTable">
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input class="info-input" type="text"  id ="first_name" name="first_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input class="info-input" type="text" id ="last_name" name="last_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input class="info-input" type="text" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact No:</td>
+                        <td><input class="info-input" type="text" id ="contact_no" name="contact_no"></td>
+                    </tr>
+                </table>
+               <input type="submit" value="Add User" id="click" />
+            </form>
+        </div>
+    </div>   
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>jQuery Functions</title>
+    <script>
+        $(document).ready(function(){
+            //click button
+            $('#dotClick').click(function(){
+                alert("You have clicked a button");
+            });
+
+            //hide text
+            $('#dotHide').click(function(){
+                $('.textHide').hide("slow",function(){
+                });
+            });
+
+            //show text
+            $('.showText').hide(function(){
+                $('#dotShow').click(function(){
+                    $('.showText').show();
+                });
+            });
+
+            //toggle text
+            $('#dotToggle').click(function(){
+                $('.toggleMe').toggle(function(){
+                });
+            });
+
+            //SlideDown -- get back to you
+            $('#dotSlideDown').click(function(){
+                $('.slideMeUp').slideDown();
+            });
+
+            //SlideUp
+            $('#dotSlideUp').click(function(){
+                $('.slideMeUp').slideUp();     
+            });
+
+            //SlideToggle
+            $('#dotSlideToggle').click(function(){
+                $('.slidetexttoggle').slideToggle(function(){
+                });
+            });
+
+            //FadeIn -- not working
+            $('#dotFadeIn').click(function(){
+                $('.fadeouttext').fadeIn("slow");
+            });
+
+            //FadeOut 
+            $('#dotFadeOut').click(function(){
+                $('.fadeouttext').fadeOut();
+            });
+
+            //Add class to Text
+            $("#dotAddClass").click(function(){
+                $(".noclass").addClass("withclass");
+            });
+        
+                
+            //Add text before
+            $('#dotAddBefore').click(function(){
+                $('.beforejquery').before("<p>Dojo</p>");
+            });
+
+            //Add text after
+            $('#dotAddAfter').click(function(){
+                $('.afterjquery').after("<p>After Dojo</p>");
+            });
+
+            //Append text
+            $('#dotAppend').click(function(){
+                $('.add-text').append("<p>Here is more text.</p>");
+            });
+
+            //change the html on the page
+            $('#dotHtml').click(function(){
+                $('.gatherHtml').html("Now, it's a <b>paragraph</b>");
+            });
+
+            //Get the value of an attribute
+            $('#dotAttr').click(function(){
+                var blue = $('.attributeName').attr("id");
+                $('.attributeName').addClass(blue);
+            });
+
+            //Get the value of form attributes
+            $('#dotVal').click(function(){
+                $('.valInput').val("Replaced!")
+            });
+
+            $('#dotText').click(function(){
+                $('.replaceText').text("Hello, New World!");
+            });
+
+            $('#dotAddDataIn').click(function(){
+                alert($('.getText').data("World!"));
+               
+            });
+
+            $('.getData').click(function(){
+                $('.getText').data("Hello World!");
+            });
+        });
+            </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="function-section">
+            <h1>.click</h1>
+            <button id="dotClick" class="function-button">.click</button>
+            <p class="function-text"> Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
+        </div>
+        <div class="function-section">
+                <h1>.hide</h1>
+                <button id="dotHide" class="function-button">.hide</button>
+                <p class="function-text">Hide the matched elements.</p>
+                <p class="textHide example">I robbed a bank. I need to hide!.</p>
+        </div>
+        <div class="function-section">
+                <h1>.show</h1>
+                <button id="dotShow" class="function-button">.show</button>
+                <p class="function-text"> Display the matched elements.</p>
+                <p class="showText example">Show me</p>
+        </div>
+        <div class="function-section">
+                <h1>.toggle</h1>
+                <button id="dotToggle" class="function-button">.toggle</button>
+                <p class="function-text"> Display or hide the matched elements.</p>
+                <p class="toggleMe example">Toggle me</p>
+        </div>
+        <div class="function-section">
+                <h1>.slideDown</h1>
+                <button id="dotSlideDown" class="function-button">.slideDown</button>
+                <p class="function-text">Display the matched elements with a sliding motion.</p>
+        </div>
+        <div class="function-section">
+                <h1>.slideUp</h1>
+                <button id="dotSlideUp" class="function-button">.slideUp</button>
+                <p class="function-text"> Hide the matched elements with a sliding motion.</p>
+                <p class="slideMeUp example">Slide this text UP</p>
+        </div>
+        <div class="function-section">
+                <h1>.fadeIn</h1>
+                <button id="dotFadeIn" class="function-button">.fadeIn</button>
+                <p class="function-text">Display the matched elements by fading them to opaque.</p>
+        </div>
+        <div class="function-section">
+                <h1>.fadeOut</h1>
+                <button id="dotFadeOut" class="function-button">.fadeOut</button>
+                <p class="function-text">Hide the matched elements by fading them to transparent.</p>
+                <p class="fadeouttext example">Fade text</p>
+        </div>
+        <div class="function-section">
+                <h1>.addClass</h1>
+                <button id="dotAddClass" class="function-button">.addClass</button>
+                <p class="function-text">Adds the specified class(es) to each element in the set of matched elements.</p>
+                <p class="noclass example">HTML with class</p>
+        </div>
+        <div class="function-section">
+                <h1>.before</h1>
+                <button id="dotAddBefore" class="function-button">.before</button>
+                <p class="function-text">Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+                <p class="beforejquery example">Coding</p>
+        </div>
+        <div class="function-section">
+                <h1>.after</h1>
+                <button id="dotAddAfter" class="function-button">.after</button>
+                <p class="function-text">Insert content, specified by the parameter, after each element in the set of matched elements.</p>
+                <p class="afterjquery example">Coding</p>
+        </div>
+        <div class="function-section">
+                <h1>.append</h1>
+                <button id="dotAppend"  class="function-button">.append</button>
+                <p class="function-text">Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p>
+                <p class="add-text example">Here is some text.</p>
+        </div>
+        <div class="function-section">
+                <h1>.html</h1>
+                <button id="dotHtml" class="function-button">.html</button>
+                <p class="function-text">Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.</p>
+                <p class="gatherHtml example">This is some text</p>
+        </div>
+        <div class="function-section">
+                <h1>.attr</h1>
+                <button id="dotAttr" class="function-button">.attr</button>
+                <p class="function-text">Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.</p>
+                <p class="attributeName example" id="blue">This has a name.</p>
+        </div>
+        <div class="function-section">
+                <h1>.val</h1>
+                <button id="dotVal" class="function-button">.val</button>
+                <p class="function-text">Get the current value of the first element in the set of matched elements or set the value of every matched element.</p>
+                <input class="valInput example" value="7">
+        </div>
+        <div class="function-section">
+                <h1>.text</h1>
+                <button id="dotText" class="function-button">.text</button>
+                <p class="function-text">Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.</p>
+                <p class="replaceText example">Hello world!</p>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    height: 200px;
+    width: 1500px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5px;
+}
+.small-images-container {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    border: 2px solid black;
+}
+ .little-images {
+    height: 100px;
+    width: 100px;
+}
+#restore {
+    background-color:blue;
+    width: 20px;
+    height: 20px;
+}

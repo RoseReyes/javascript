@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Dojo_Arena.css">
+    <title>Dojo Arena</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        
+            $(document)
+            .on("mouseover", ".arena", function(){
+                $(".wrapper").css("background-image", "url("+$(this).attr("img-src")+")");
+            })
+            .on("mouseleave",".arena", function(){
+                $(".wrapper").css("background-image", "none");
+            })
+
+            $(document).on("click", ".arena", function(){               
+                $(".wrapper").css("background-image", "url("+$(this).attr("img-src")+")");
+                $(".arena").remove()
+                for (var num=1; num<=2; num++){
+                    $(".map-selector").append("<select class='character-"+num+"'><option value='img/Character1.png'>char1</option><option value='img/Character2.png'>char2</option><option value='img/Character3.png'>char3</option><option value='img/Character4.png'>char4</option></select>")
+                }
+                $(".map-selector").append("<button class='back'>Back</button><button class='fight'>Fight!</button>")
+            })
+
+            $(document).on("click",".character-1", function(){
+                $(".char1").html("<img src='"+$(".character-1").val()+"'>")
+            })
+            
+            $(document).on("click",".character-2", function(){
+                $(".char2").html("<img src='"+$(".character-2").val()+"'>")
+            })
+
+            $(document).on("click",".back", function(){
+                $("select, .back, .fight, .char1, .char2").remove();
+                $(".map-selector").append('<button class="arena" img-src="img/beach.jpg">beach</button><button class="arena" img-src="img/earth.jpg">planet</button><button class="arena" img-src="img/dojo.jpg">dojo</button><button class="arena" img-src="img/forest.jpg">forest</button><button class="arena" img-src="img/matrix.jpg">matrix</button><button class="arena" img-src="img/snow.jpg">snow</button>')
+                
+            })
+
+            $(document).on("click",".fight", function(){
+                $(".map-selector").remove();
+            })
+        })   
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="map-selector">
+            <h1>Select Arena</h1>
+            <button class="arena" img-src="img/beach.jpg">beach</button>
+            <button class="arena" img-src="img/earth.jpg">planet</button>
+            <button class="arena" img-src="img/dojo.jpg">dojo</button>
+            <button class="arena" img-src="img/forest.jpg">forest</button>
+            <button class="arena" img-src="img/matrix.jpg">matrix</button>
+            <button class="arena" img-src="img/snow.jpg">snow</button>
+        </div>
+        <div class="char1"></div>
+        <div class="char2"></div>        
+    </div>
+</body>
+</html>

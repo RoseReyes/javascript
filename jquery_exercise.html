@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready( function() {
+            function attach_h3_handlers() {
+                $('h3').click( function() { alert('You clicked an H3!'); });
+            }
+
+            $('h3').click( function() {
+                alert('You clicked an H3!');
+            });
+            $('button').click( function() {
+                $('div').append('<h3>I am a dynamically generated H3</h3>');
+                attach_h3_handlers();
+            });
+        });
+    </script>
+    <title>Jquery-Exercise</title>
+</head>
+<body>
+    <div>
+        <button>Click me to add a new H3 tag!</button>
+        <h3>Click me to see a message!</h3>
+    </div>
+</body>
+</html>

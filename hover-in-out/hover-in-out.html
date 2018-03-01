@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                  $(".little-images")
+                  .mouseenter(function(){
+                        var prevImg =   $(this).attr("src");  
+                        var newImg =  $(this).attr("new-data-src"); 
+
+                        $(this).attr("src",newImg);      
+                  })
+                  .mouseleave(function(){
+                        var temp = $(this).attr("temp-src");
+                        $(this).attr("src",temp);   
+                  });
+            });
+       </script>
+    <title>Document</title>
+</head>
+<body>
+      <div id="wrapper">
+            <div class="small-images-container">
+                  <img class ="little-images" src="cat0.png" new-data-src="replace0.png" temp-src="cat0.png" alt="Image 1">
+            </div>
+            <div class="small-images-container">
+                  <img class="little-images" src="cat1.jpg" new-data-src="replace1.jpg" temp-src="cat1.jpg" alt="Image 2"> 
+            </div>
+            <div class="small-images-container">
+                  <img  class="little-images" src="cat2.jpg" new-data-src="replace2.png" temp-src="cat2.jpg" alt="Image 3"> 
+            </div>
+            <div class="small-images-container">
+                  <img  class="little-images" src="cat3.gif" new-data-src="replace3.png" temp-src="cat3.gif" alt="Image 4">
+            </div>
+            <div class="small-images-container">
+                  <img  class="little-images" src="cat4.jpg" new-data-src="replace4.png" temp-src="cat4.jpg" alt="Image 5">
+            </div>
+            <div class="small-images-container">
+                  <img  class="little-images" src="cat5.png" new-data-src="replace5.png" temp-src="cat5.png" alt="Image 6">
+            </div>
+            <div class="small-images-container">
+                  <img  class="little-images" src="cat6.png" new-data-src="replace6.png" temp-src="cat6.png" alt="Image 7">
+            </div>
+            <div class="small-images-container">
+                  <img  class="little-images" src="cat7.jpg" new-data-src="replace7.png" temp-src="cat7.jpg" alt="Image 8">
+            </div>
+      </div>
+</body>
+</html>

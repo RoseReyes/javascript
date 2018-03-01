@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                $(".puzzle-image").click(function(){
+                    var prevImg = $(this).attr('src');
+                    var newImg = $(this).attr('new-data-src');
+                    
+                    if(prevImg !== newImg) 
+                    {
+                        $(this).attr('src',newImg);
+                        $(this).attr('new-data-src',prevImg);
+                        console.log($(this).attr('src',newImg));
+                    }
+                });
+            });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id ="wrapper">
+        <div id="puzzle-pieces">
+            <img class="puzzle-image" src="ninja0.png" new-data-src='cat0.png'>
+        </div>
+        <div id="puzzle-pieces">
+            <img class="puzzle-image" src="ninja1.png" new-data-src='cat1.png'>
+        </div>
+        <div id="puzzle-pieces">
+            <img class="puzzle-image" src="ninja2.png" new-data-src='cat2.png'>
+        </div>
+        <div id="puzzle-pieces">
+            <img class="puzzle-image" src="ninja3.png" new-data-src='cat3.png'>
+        </div>
+        <div id="puzzle-pieces">
+            <img class="puzzle-image" src="ninja4.png" new-data-src='cat4.png'>
+        </div>
+    </div>
+</body>
+</html>
