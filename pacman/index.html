@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+
+              var world =[[0,0,0,0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0,0,0,0]
+                        ]
+
+              var htmlStr = "";
+
+              for(var y=0; y < world.length; y++) {
+                  for(var x=0; x < world[y].length; x++) {
+                      if(world[y][x] === 0) {
+                          htmlStr += '<div class="wall"></div>';
+                      }
+                      if(world[y][x] === 1) {
+                          htmlStr += '<div class="ground"></div>';
+                      }
+                  }
+              }
+
+            ///Insert keypress function
+                //change PM's current position
+                //change PM's obj coordinates
+                //use PM's obj updated coordinates to put a 2 on the board
+
+            });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id ="map"></div>
+</body>
+</html>

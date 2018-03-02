@@ -3,21 +3,32 @@
     padding: 0;
 }
 #pokemon {
-    height: 1000px; 
-    width: 1000px;
+    width: 900px;
     display:inline-block;
     vertical-align: top;
+    margin: 20px;
+    border: 2px solid rgb(247, 6, 6);
+    border-radius: 20px;
+
 }
 #pokemon-details {
     height: 500px;
-    width: 300px;
+    width: 200px;
     border: 20px solid red;
     display: inline-block;
     vertical-align: top;
     padding: 20px;
-    margin: 25px;
+    margin: 20px;
     font-size: 20px;
+    border-radius: 20px;
+    text-align: center;
 }
  p {
      margin: 20px;
  }
+  img {
+      width: 100px;
+      height: 100px;
+
+  }
+
