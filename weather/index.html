@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $('form').submit(function() {
+            
+                var city = $('.search').val()
+                var key = '2e578c56098d546b27aa3f53d8857cc5'
+                var html_str_city = "";
+                var html_str_temp = "";
+
+                
+                $.get("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key, function(data) {
+                    $('#temperature').empty();
+                        
+                        var farenheit = Math.floor((data.main.temp)* 9/5 - 459.67)
+            
+                        html_str_city += "<p>" + data.name + "</p>"
+                        html_str_temp += "<p>Temperature:" + farenheit + "</p>"
+                        $("#temperature").append(html_str_city,html_str_temp);
+
+                 }, 'json');
+            // don't forget to return false so the page doesn't refresh
+            return false;
+        });
+    });
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input class="search" type="text" name="search" value="">
+        <input class="submit-btn" type ="submit" name="temp" value="Search Weather">
+    </form>
+    <div id="temperature"></div>
+</html>

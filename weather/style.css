@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#temperature {
+    height: 500px; 
+    width: 900px;
+    margin: 20px;
+    font-size: 65px;
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    text-shadow: white;
+    margin-top: 10px;
+}
+
+.search {
+    width: 248px;
+    height:25px;
+    margin: 20px;
+    border: 2px solid grey;
+}
