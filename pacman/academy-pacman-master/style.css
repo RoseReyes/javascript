@@ -1,0 +1,46 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .row {
+            line-height: 0;
+        }
+        .wall {
+            background-color: rgb(34, 36, 177);
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+            margin: 0 auto;
+        }
+        .retrocoin {
+            background-color: black;
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+            background-image: url('img/retrocoin.png');
+            background-size: contain;
+        }
+        .blank {
+            background-color: black;
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+        }
+        #ninjaman {
+            height: 60px;
+            width: 60px;
+            display: inline-block;
+            background-image: url('img/pacman.gif');
+            background-size:contain;
+            position: absolute;
+        }
+        #score {
+            height: 100px;
+            width: 600px;
+            background-color: rgba(173, 216, 230, 0.911);
+        }
+        h1 {
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }

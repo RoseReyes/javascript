@@ -8,44 +8,44 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $(document).on("click","#click", function(){
-                var first_name = $('#first_name').val()
-                var last_name = $('#last_name').val()
-                var description = $('#description').val()
 
-                $('#contact').append('<div>' + first_name + '</div>').css("width","100px").css("height","100px")
-                $('#contact').append('<div>' + last_name + '</div>').css("width","100px").css("height","100px")
-                $('#contact').append('<div>' + description + '</div>').css("width","100px").css("height","100px")
-                
+            $(document).on("click","button", function(){
 
-                
-            return false;
+                var firstName = $('#first_name').val();
+                var lastName = $('#last_name').val();
+                var description =$('.description').val();
+            
+                $("<div class='dynamicDiv'><p font-size='20px'>"+ firstName + " " + lastName + "</p><p>Click for more description!</p></div>").css({'font-size' : '40px','width' : '350px','height' : '230px','margin' : '10px 0px 0px 20px','border-radius' : '2px','border' : '5px solid #174484', 'text-align' : 'center','line-height' : '150px'}).appendTo("#contact")
+
+                return false;  
             })
-           
+            
+            $(this).on("click",".dynamicDiv", function(){
+                var description = $('.description').val();
+                
+                $('.dynamicDiv').remove();
+
+                $("<div class='dynamicDiv'>" + description + "</div>").css({'font-size' : '20px','width' : '350px','height' : '230px','margin' : '10px 0px 0px 20px','border-radius' : '2px','border' : '5px solid #174484', 'text-align' : 'center','line-height' : '150px'}).appendTo("#contact")
+
+                return false;  
+            })
+     
         });
         </script>
     <title>Document</title>
 </head>
 <body>
-    <div id="input">
-        <form class="regForm">    
-            <table class="appendTable">
-                <tr>
-                    <td>First Name:</td>
-                    <td><input class="info-input" type="text"  id ="first_name" name="first_name"></td>
-                </tr>
-                <tr>
-                    <td>Last Name:</td>
-                    <td><input class="info-input" type="text" id ="last_name" name="last_name"></td>
-                </tr>
-                <tr>
-                    <td>Description:</td>
-                    <td> <textarea class="info-input" name="description" id="description"></textarea></td>
-                </tr>
-             </table>
-            <input type="submit" value="Add User" id="click"/>
+    <div id="wrapper">
+        <form class="addForm">
+            <p><label>First Name:</label><input class="input-field" type="text"  id ="first_name" name="first_name"></p>
+            <p><label>Last Name:</label><input class="input-field" type="text"  id ="last_name" name="first_name"></p>
+            <p>Description</p>
+            <textarea class="description" name="description"></textarea>
+            <p><button>Add User</button></p>
         </form>
     </div>
     <div id="contact"></div>
+   
+    
 </body>
 </html>
